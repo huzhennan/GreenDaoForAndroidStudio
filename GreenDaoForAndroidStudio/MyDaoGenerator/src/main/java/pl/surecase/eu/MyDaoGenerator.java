@@ -8,6 +8,10 @@ public class MyDaoGenerator {
 
     public static void main(String args[]) throws Exception {
         Schema schema = new Schema(3, "greendao");
+
+        schema.enableActiveEntitiesByDefault();
+        schema.enableKeepSectionsByDefault();
+
         Entity box = schema.addEntity("Box");
         box.addIdProperty();
         box.addStringProperty("name");
